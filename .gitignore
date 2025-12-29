@@ -2,6 +2,8 @@
 data/raw/
 data/processed/*.csv
 !data/processed/.gitkeep
+!data/processed/drift_accuracy_results.csv 
+
 
 # Model files
 models/*.pkl

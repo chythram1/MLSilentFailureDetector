@@ -21,11 +21,26 @@ By the time accuracy drops, you've already made thousands of bad predictions.
 st.divider()
 
 # ===== Load Data =====
-script_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.join(script_dir, '..')
-data_path = os.path.join(project_root, 'data', 'processed', 'drift_accuracy_results.csv')
+@st.cache_data
+def load_data():
+    # Try multiple paths
+    possible_paths = [
+        'data/processed/drift_accuracy_results.csv',  # From repo root
+        '../data/processed/drift_accuracy_results.csv',  # From src folder
+        os.path.join(os.path.dirname(__file__), '..', 'data', 'processed', 'drift_accuracy_results.csv')
+    ]
+    
+    for path in possible_paths:
+        if os.path.exists(path):
+            return pd.read_csv(path)
+    
+    st.error("Could not find drift_accuracy_results.csv")
+    return None
 
-df = pd.read_csv(data_path)
+df = load_data()
+
+if df is None:
+    st.stop()
 
 # Calculate aggregate PSI
 psi_features = ['PAY_0', 'BILL_AMT1', 'PAY_AMT2']
