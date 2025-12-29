@@ -3,11 +3,9 @@
 An early warning system that detects machine learning model degradation **before** accuracy drops, giving teams time to investigate and fix issues.
 Some Pictures from Streamlit dashboard:
 
+Click on the link to see it in action! ->
+
 <img width="935" height="317" alt="image" src="https://github.com/user-attachments/assets/850b146c-0d5d-48c5-a70e-21e915d8de02" />
-<img width="652" height="353" alt="image" src="https://github.com/user-attachments/assets/957cd510-c465-4478-870e-f4b1086e4b75" />
-<img width="658" height="374" alt="image" src="https://github.com/user-attachments/assets/c0f7f2dd-42a3-4ba1-9ada-042cc65386c9" />
-<img width="667" height="337" alt="image" src="https://github.com/user-attachments/assets/7c32849d-ade8-4df2-ae5c-7bb23835ec36" />
-<img width="593" height="341" alt="image" src="https://github.com/user-attachments/assets/7aacdc95-d648-4d46-97af-cf562218be8f" />
 
 ---
 
@@ -250,3 +248,4 @@ The Streamlit dashboard provides:
 - [ ] Add email/Slack alerts
 - [ ] Support real-time streaming data
 - [ ] Add concept drift detection (feature-label relationship changes)
+
