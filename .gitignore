@@ -1,0 +1,19 @@
+# Data files
+data/raw/
+data/processed/*.csv
+!data/processed/.gitkeep
+
+# Model files
+models/*.pkl
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb# Clear output manually, but ignore checkpoint folders
+
+# Environment
+.env
+venv/
